@@ -503,7 +503,7 @@
 
     <!-- Modals -->
 
-    <div class="modal" style="display: none">
+    <div class="modal" >
         <div class="modal__dialog">
 
             <button type="button" class="modal__dialog__close">
@@ -804,7 +804,7 @@
 
     <!-- modal Lt's talk! -->
 
-    <div class="modal">
+    <div class="modal" style="display: none">
         <div class="modal__dialog modal__dialog_sm">
 
             <button type="button" class="modal__dialog__close">
@@ -814,10 +814,34 @@
             <div class="contact">
                 <div class="contact__left">
                     <h3 class="modal__title mb-0">LET'S TALK!</h3>
-                    <div class="contact__left__sybtitle">CALL ME OR SEND ME A REQUEST</div>
-                </div>
-                <div class="contact__right">
+                    <h4 class="contact__left__sybtitle">CALL ME OR SEND ME A REQUEST</h4>
 
+                    <ul class="contact__left__info">
+                        <li class="contact__left__info__item">
+                            <img src="./img/Modals/phone.svg" alt="" class="contact__left__info__item__icon">
+                            (200) 100 3000
+                        </li>
+                        <li class="contact__left__info__item">
+                            <img src="./img/Modals/mail.svg" alt="" class="contact__left__info__item__icon">
+                            designer@ui43.com
+                        </li>
+                    </ul>
+
+                    <form action="/" method="POST" class="form">
+                        <div class="form__marginBottom">
+                            <label for="input__email" class="form__label">Adress e-mail</label>
+                            <input type="text" id="input__email" name="input__email" class="form__input" placeholder="Adress e-mail">
+                        </div>
+
+                        <div class="form__marginBottom">
+                            <label for="input__Request" class="form__label">Request</label>
+                            <textarea name="input__Request" id="input__Request" class="form__textarea" placeholder="Type your request..."></textarea>
+                        </div>
+
+                        <div class="text_right">
+                            <button type="submit" class="btn">send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
