@@ -32,7 +32,7 @@
                     <a href="#" class="nav__link">about me</a>
                     <a href="#" class="nav__link">blog</a>
                     <a href="#" class="nav__link">contact</a>
-                    <a href="#" class="nav__link nav__link_btn">hire me</a>
+                    <a href="#" class="nav__link nav__link_btn" data-modal="#modal_contact">hire me</a>
                 </nav>
             </div>
         </div>
@@ -70,8 +70,8 @@
                         </a>
                     </div>
 
-                    <a href="#" class="btn">HIRE ME</a>
-                    <button type="button" class="btn">SEE MY RESUME</button>
+                    <a href="#" class="btn" data-modal="#modal_contact">HIRE ME</a>
+                    <button type="button" class="btn" data-modal="#modal_resume">SEE MY RESUME</button>
                 </div>
 
                 <img src="./img/designer_photo.png" alt="" class="intro__photo">
@@ -96,7 +96,7 @@
 
                 <div class="portfolio__col" data-cat="App">
 
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_view">
                         <img src="https://placehold.it/370x300" alt="" class="img">
                         <div class="portfolio__item__content">
                             <div class="portfolio__item__content_category">
@@ -114,7 +114,7 @@
                 </div>
                 <div class="portfolio__col" data-cat="Website">
 
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_view">
                         <img src="https://placehold.it/370x300" alt="" class="img">
                         <div class="portfolio__item__content">
                             <div class="portfolio__item__content_category">
@@ -132,7 +132,7 @@
                 </div>
                 <div class="portfolio__col" data-cat="Interaction">
 
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_view">
                         <img src="https://placehold.it/370x300" alt="" class="img">
                         <div class="portfolio__item__content">
                             <div class="portfolio__item__content_category">
@@ -150,7 +150,7 @@
                 </div>
                 <div class="portfolio__col" data-cat="Website">
 
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_view">
                         <img src="https://placehold.it/370x300" alt="" class="img">
                         <div class="portfolio__item__content">
                             <div class="portfolio__item__content_category">
@@ -168,7 +168,7 @@
                 </div>
                 <div class="portfolio__col" data-cat="Interaction">
 
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_view">
                         <img src="https://placehold.it/370x300" alt="" class="img">
                         <div class="portfolio__item__content">
                             <div class="portfolio__item__content_category">
@@ -186,7 +186,7 @@
                 </div>
                 <div class="portfolio__col" data-cat="App">
 
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_view">
                         <img src="https://placehold.it/370x300" alt="" class="img">
                         <div class="portfolio__item__content">
                             <div class="portfolio__item__content_category">
@@ -204,7 +204,7 @@
                 </div>
                 <div class="portfolio__col" data-cat="App">
 
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_view">
                         <img src="https://placehold.it/370x300" alt="" class="img">
                         <div class="portfolio__item__content">
                             <div class="portfolio__item__content_category">
@@ -222,7 +222,7 @@
                 </div>
                 <div class="portfolio__col" data-cat="App">
 
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_view">
                         <img src="https://placehold.it/370x300" alt="" class="img">
                         <div class="portfolio__item__content">
                             <div class="portfolio__item__content_category">
@@ -240,7 +240,7 @@
                 </div>
                 <div class="portfolio__col" data-cat="App">
 
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_view">
                         <img src="https://placehold.it/370x300" alt="" class="img">
                         <div class="portfolio__item__content">
                             <div class="portfolio__item__content_category">
@@ -291,8 +291,8 @@
                             ipsum fugiat accusantium. Sapiente nobis voluptatem architecto maiores.</p>
                     </div>
 
-                    <a href="#" class="btn">HIRE ME</a>
-                    <button type="button" class="btn">SEE MY RESUME</button>
+                    <a href="#" class="btn" data-modal="#modal_contact">HIRE ME</a>
+                    <button type="button" class="btn" data-modal="#modal_resume">SEE MY RESUME</button>
 
                 </div>
 
@@ -491,7 +491,7 @@
                     <a href="#" class="footer__inner__nav__link">About me</a>
                     <a href="#" class="footer__inner__nav__link">Blog</a>
                     <a href="#" class="footer__inner__nav__link">Contact</a>
-                    <a href="#" class="footer__inner__nav__link footer__inner__nav__link_btn">Hire me</a>
+                    <a href="#" class="footer__inner__nav__link footer__inner__nav__link_btn" data-modal="#modal_contact">Hire me</a>
                 </div>
 
             </div>
@@ -504,10 +504,12 @@
 
     <!-- Modals -->
 
-    <div class="modal" style="display: none">
+    <!-- Project view -->
+
+    <div class="modal" id="modal_project_view">
         <div class="modal__dialog">
 
-            <button type="button" class="modal__dialog__close">
+            <button type="button" class="modal__dialog__close" data-close>
                 <img src="./img/Modals/modal__project__buttons_CLOSE.svg" alt="close">
             </button>
 
@@ -572,12 +574,14 @@
         </div>
     </div>
 
+    <!-- Project view close -->
+
     <!-- modal resume -->
 
-    <div class="modal" style="display: none">
+    <div class="modal" id="modal_resume">
         <div class="modal__dialog">
 
-            <button type="button" class="modal__dialog__close">
+            <button type="button" class="modal__dialog__close" data-close>
                 <img src="./img/Modals/modal__project__buttons_CLOSE.svg" alt="close">
             </button>
 
@@ -803,12 +807,12 @@
 
     <!-- modal resume close -->
 
-    <!-- modal Lt's talk! -->
+    <!-- modal contact -->
 
-    <div class="modal" style="display: none">
+    <div class="modal" id="modal_contact">
         <div class="modal__dialog modal__dialog_sm">
 
-            <button type="button" class="modal__dialog__close">
+            <button type="button" class="modal__dialog__close" data-close>
                 <img src="./img/Modals/modal__project__buttons_CLOSE.svg" alt="close">
             </button>
 
@@ -848,7 +852,7 @@
         </div>
     </div>
 
-    <!-- modal Lt's talk! close -->
+    <!-- modal contact close -->
 
     <!-- Modals close -->
 
