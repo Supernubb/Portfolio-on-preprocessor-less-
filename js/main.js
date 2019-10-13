@@ -40,7 +40,13 @@ $(function() {
         $(modalId).addClass('show');
         $('body').addClass('no__scroll');
 
-        $(modalId).find
+        setTimeout(function () {
+            $(modalId).find('.modal__dialog').css({
+                transform: 'rotateX(0)'
+            });
+        }, 200);
+
+        $('[data-slider="slick"]').slick('setPosition');
     });
 
     modalClose.on('click', function(event) {
@@ -49,13 +55,27 @@ $(function() {
         let $this = $(this);
         let modalParent = $this.parents('.modal');
 
-        modalParent.removeClass('show');
-        $('body').removeClass('no__scroll');
+        modalParent.find('.modal__dialog').css({
+            transform: 'rotateX(90deg)'
+        });
+
+        setTimeout(function () {
+            modalParent.removeClass('show');
+            $('body').removeClass('no__scroll');
+        }, 200);
     });
 
     $('.modal').on('click', function(event) {
-        $(this).removeClass('show');
-        $('body').removeClass('no__scroll');
+        let $this = $(this);
+
+        $this.find('.modal__dialog').css({
+            transform: 'rotateX(90deg)'
+        });
+
+        setTimeout(function () {
+            $this.removeClass('show');
+            $('body').removeClass('no__scroll');
+        }, 200);
     });
 
     $('.modal__dialog').on('click', function(event) {
@@ -63,5 +83,32 @@ $(function() {
     });
 
     // modal close
+
+    // slick https://kenwheeler.github.io/slick/
+
+    $('[data-slider="slick"]').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true
+    });
+
+    $('.slickPrev').on('click', function (event) {
+        event.preventDefault();
+
+        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+        currentSlider.slick('slickPrev');
+    });
+
+    $('.slickNext').on('click', function (event) {
+        event.preventDefault();
+
+        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+        currentSlider.slick('slickNext');
+    });
+
+    // slick close
 
 });

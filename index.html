@@ -518,7 +518,14 @@
             <div class="modal__project">
 
                 <div class="modal__project__photo">
-                    <img src="https://placehold.it/790x780" alt="" class="modal__project__photo_image">
+                    <div data-slider="slick">
+                        <div>
+                            <img src="https://placehold.it/790x780" alt="" class="modal__project__photo_image">
+                        </div>
+                        <div>
+                            <img src="https://placehold.it/790x780/333" alt="" class="modal__project__photo_image">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="modal__project__content">
@@ -558,10 +565,10 @@
                     </div>
 
                     <div class="modal__project__buttons">
-                        <button class="modal__project__buttons__btn" type="button"> <img
+                        <button class="modal__project__buttons__btn slickPrev" type="button"> <img
                                 src="./img/Modals/modal__project__buttons_PrevArrow.svg" alt="" height="12px">
                             PREVIOUS</button>
-                        <button class="modal__project__buttons__btn" type="button">NEXT <img
+                        <button class="modal__project__buttons__btn slickNext" type="button">NEXT <img
                                 src="./img/Modals/modal__project__buttons_NextArrow.svg" alt="" height="12px"> </button>
                     </div>
 
@@ -858,6 +865,7 @@
 
     <!-- JS -->
 
+    <script src="js/slick.min.js"></script>
     <script src="./js/main.js"></script>
 
     <!-- JS close -->
